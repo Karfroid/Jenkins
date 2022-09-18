@@ -4,7 +4,7 @@ pipeline{
 
     parameters{
             choice(name: "VERSION", choices: ["1.0.0","1.0.1","2.0.0"], description:"")
-            booleanParam(name: 'pullcode',defaultvalue: false,description:'')
+            booleanParam(name: 'pullcode', defaultvalue: false, description:'')
     }
 
     stages{
