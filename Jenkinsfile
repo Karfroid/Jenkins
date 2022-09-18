@@ -12,7 +12,7 @@ pipeline{
         stage("Code Pull"){
                 when{
                     expression{
-                        param.pullcode == true
+                        params.pullcode == true
                     }
                 }
                 steps{
@@ -32,6 +32,7 @@ pipeline{
 		stage('deploy'){
 					steps{
                         echo "Code is deployed"
+			echo "Code version deployed is ${params.VERSION}"			
                 }
 				}
 		stage('regression test'){
