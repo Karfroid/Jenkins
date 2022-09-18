@@ -20,16 +20,24 @@ pipeline{
                 }
         }
         stage('build'){
-					echo 'code is built'
+					steps{
+                        echo "Code is built"
+                }
 				}
 		stage('quality gate'){
-					echo 'code is quality check'
+					steps{
+                        echo "Code is quality tested"
+                }
 				     }
 		stage('deploy'){
-					echo 'deployed'
+					steps{
+                        echo "Code is deployed"
+                }
 				}
 		stage('regression test'){
-					echo 'testing is done'
+					steps{
+                        echo "Code is tested"
+                }
 					}
 
 
